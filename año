@@ -1,0 +1,34 @@
+using System;
+
+namespace año
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+			Console.WriteLine("Calcular años biisiestos \n");
+			Console.WriteLine("Año a calcular \n");
+
+			string ano1 = Console.ReadLine();
+			Console.WriteLine("Año final a calcular: \n");
+			string ano2 = Console.ReadLine();
+
+			for (int a = Convert.ToInt32(ano1); a <= Convert.ToInt32(ano2); a++)
+			{
+
+
+				if (a % 4 == 0 && a % 100 != 0 || a % 400 == 0)
+				{
+					Console.WriteLine("El año es bisiesto {0}\n", a);
+				}
+				else
+				{
+					Console.WriteLine("El año no es bisiesto {0} \n", a);
+				}
+			}
+
+
+			Console.ReadKey();
+		}
+    }
+}
