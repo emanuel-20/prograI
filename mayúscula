@@ -1,0 +1,24 @@
+using System;
+
+namespace mayúscula
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+			char letra;
+			Console.WriteLine("Introduzca una letra alfabética: ");
+			letra = char.Parse(Console.ReadLine());
+
+
+			if (Char.IsUpper(letra))
+			{
+				Console.WriteLine("La letra es una letra mayuscula.");
+			}
+			else
+			{
+				Console.WriteLine("La letra es una letra minuscula.");
+			}
+		}
+    }
+}
