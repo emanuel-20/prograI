@@ -1,0 +1,39 @@
+using System;
+
+namespace labs
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int numero;
+            double impuesto, valor, final;
+
+            Console.WriteLine("1. Medicina");
+            Console.WriteLine("2. Varios");
+            Console.Write("Elija el tipo de producto a comprar: ");
+            numero = Convert.ToInt32(Console.ReadLine());
+
+            switch (numero)
+            {
+                case 1:
+                    Console.Write("Ingrese el precio del producto: ");
+                    valor = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine("Como su producto es de ámbito medicinal, no aplica impuesto.");
+                    Console.Write("El total es: {0}", valor);
+                    break;
+                case 2:
+                    Console.Write("Ingrese el precio del producto: ");
+                    valor = Convert.ToDouble(Console.ReadLine());
+
+                    impuesto = (valor * 12) / 100;
+
+                    final = valor + impuesto;
+                    Console.WriteLine("El impuesto es de: {0}", impuesto);
+                    Console.Write("E total final es: {0}", final);
+                    break;
+            }
+
+        }
+    }
+}
